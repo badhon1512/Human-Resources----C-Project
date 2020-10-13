@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{359E1517-103C-4684-AAB1-99030E9633CE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HRUpdate</RootNamespace>
+    <AssemblyName>HRUpdate</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DataAccess.cs" />
+    <Compile Include="DeligateForEmployee.cs" />
+    <Compile Include="FormDepertmentHead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDepertmentHead.Designer.cs">
+      <DependentUpon>FormDepertmentHead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHR.Designer.cs">
+      <DependentUpon>FormHR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager.Designer.cs">
+      <DependentUpon>FormManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOtherEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOtherEmployees.Designer.cs">
+      <DependentUpon>FormOtherEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateEmployee.Designer.cs">
+      <DependentUpon>FormUpdateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR.Entity\ProjectRevenue.cs" />
+    <Compile Include="HR.Repo\ProjectRevenueRepository.cs" />
+    <Compile Include="UCFinancialInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCFinancialInformation.Designer.cs">
+      <DependentUpon>UCFinancialInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCPrresenceInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPrresenceInformation.Designer.cs">
+      <DependentUpon>UCPrresenceInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCHRDepertmentInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCHRDepertmentInformation.Designer.cs">
+      <DependentUpon>UCHRDepertmentInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCLeaveApplication.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCLeaveApplication.Designer.cs">
+      <DependentUpon>UCLeaveApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemeColor.cs" />
+    <Compile Include="UCEmployeeInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCEmployeeInformation.Designer.cs">
+      <DependentUpon>UCEmployeeInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCItDepertmentInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCItDepertmentInformation.Designer.cs">
+      <DependentUpon>UCItDepertmentInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCLeaveDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCLeaveDetails.Designer.cs">
+      <DependentUpon>UCLeaveDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCNotification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCNotification.Designer.cs">
+      <DependentUpon>UCNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCPasswordRecovery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPasswordRecovery.Designer.cs">
+      <DependentUpon>UCPasswordRecovery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCResignedEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCResignedEmployee.Designer.cs">
+      <DependentUpon>UCResignedEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCRevenue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRevenue.Designer.cs">
+      <DependentUpon>UCRevenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCSalary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSalary.Designer.cs">
+      <DependentUpon>UCSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCSalaryChange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSalaryChange.Designer.cs">
+      <DependentUpon>UCSalaryChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCSelfInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSelfInformation.Designer.cs">
+      <DependentUpon>UCSelfInformation.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDepertmentHead.resx">
+      <DependentUpon>FormDepertmentHead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHR.resx">
+      <DependentUpon>FormHR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager.resx">
+      <DependentUpon>FormManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOtherEmployees.resx">
+      <DependentUpon>FormOtherEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateEmployee.resx">
+      <DependentUpon>FormUpdateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCFinancialInformation.resx">
+      <DependentUpon>UCFinancialInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPrresenceInformation.resx">
+      <DependentUpon>UCPrresenceInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCHRDepertmentInformation.resx">
+      <DependentUpon>UCHRDepertmentInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCLeaveApplication.resx">
+      <DependentUpon>UCLeaveApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UCEmployeeInformation.resx">
+      <DependentUpon>UCEmployeeInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCItDepertmentInformation.resx">
+      <DependentUpon>UCItDepertmentInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCLeaveDetails.resx">
+      <DependentUpon>UCLeaveDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCNotification.resx">
+      <DependentUpon>UCNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPasswordRecovery.resx">
+      <DependentUpon>UCPasswordRecovery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCResignedEmployee.resx">
+      <DependentUpon>UCResignedEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRevenue.resx">
+      <DependentUpon>UCRevenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSalary.resx">
+      <DependentUpon>UCSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSalaryChange.resx">
+      <DependentUpon>UCSalaryChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSelfInformation.resx">
+      <DependentUpon>UCSelfInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserControl\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\company.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lOGOUT2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\it.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HRDEPT.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
